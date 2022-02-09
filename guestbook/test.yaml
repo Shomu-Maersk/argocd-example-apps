@@ -1,28 +1,28 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: guestbook-test
-  namespace: emp-cdt
-spec:
-  replicas: 1
-  revisionHistoryLimit: 3
-  selector:
-    matchLabels:
-      app: guestbook-ui
-  template:
-    metadata:
-      labels:
-        app: guestbook-test
-    spec:
-      containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
-        name: guestbook-test
-        ports:
-        - containerPort: 80
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: guestbook-test
+#   namespace: emp-cdt
+# spec:
+#   replicas: 1
+#   revisionHistoryLimit: 3
+#   selector:
+#     matchLabels:
+#       app: guestbook-ui
+#   template:
+#     metadata:
+#       labels:
+#         app: guestbook-test
+#     spec:
+#       containers:
+#       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+#         name: guestbook-test
+#         ports:
+#         - containerPort: 80
+#         resources:
+#           requests:
+#             memory: "64Mi"
+#             cpu: "250m"
+#           limits:
+#             memory: "128Mi"
+#             cpu: "500m"
